@@ -12,7 +12,7 @@ class Game
   end
 
   def turn
-    puts "hi"
+    puts "hi" #testing 
     @turnboth = [0, 1]
     result = @turnboth.sample
     if result == 1
@@ -59,17 +59,17 @@ class Game
   end
 
   def start
-    game1 = Game.new
-    puts "Hi there. We are going to play 'Fifteen'. But first tell me your name: "
+    game = Game.new
+    puts "Hi there. We are going to play 'game'. But first tell me your name: "
     name = gets.chomp
     puts "Great #{name}! lets play!!"
-    game1.turn
-    game1.player_turn
-    game1.computer_turn
+    game.turn
+    game.player_turn
+    game.computer_turn
   end
 end
 
 
 
-game1 = Game.new
-game1.start
+game = Game.new
+game.start
