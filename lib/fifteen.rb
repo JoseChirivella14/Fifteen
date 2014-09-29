@@ -12,7 +12,7 @@ class Game
   end
 
   def turn
-    puts "hi" #testing 
+    puts "hi" #testing
     @turnboth = [0, 1]
     result = @turnboth.sample
     if result == 1
@@ -25,7 +25,7 @@ class Game
   def player_turn
     puts "Choose a number between 1 and 9"
     @player_choose = gets.chomp.to_i
-    if numbers.include?(@player_choose) == false
+    if @numbers.include?(@player_choose) == false
       puts "Hey. You only can choose a number between 1 and 9. No less no more"
       player_turn
     end
@@ -43,8 +43,8 @@ class Game
   end
 
   def computer_turn
-    @computer_choose = @numbers.sample
-    puts " I pick the number #{@computer_choose}"
+    @computer_choose = @numbers.sample # Here is the error <--- is computer_numbers
+    # puts " I pick the number #{@computer_choose}"
     @numbers.delete(@computer_choose)
     computer_turn
   end
